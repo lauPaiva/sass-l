@@ -1,0 +1,156 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  position: relative;
+  font-size: 1.5rem;
+  background-image: url(../img/fondo3.png);
+  background-attachment: fixed;
+  background-color: #1d3557;
+  min-height: 100vh;
+  font-family: 'Barlow Condensed', sans-serif; }
+
+/* Estilos del MENÚ mobile*/
+.menu {
+  background-color: #1d3557; }
+  .menu .menu__div-fluid {
+    padding: 0; }
+    .menu .menu__div-fluid .menu__a-home {
+      color: white;
+      margin: 0.2rem 0rem;
+      padding: 0.5rem 2rem;
+      font-size: 1.6rem; }
+    .menu .menu__div-fluid .menu__icono {
+      margin-right: 1rem;
+      padding: 0.3rem;
+      background-color: transparent;
+      border: none; }
+    .menu .menu__div-fluid div ul .menu__li {
+      margin: 0.2rem 0rem;
+      padding: 0.5rem 2rem;
+      font-size: 1.6rem; }
+      .menu .menu__div-fluid div ul .menu__li .menu__a {
+        color: white;
+        text-decoration: none; }
+
+/*Estilos de HOME mobile*/
+.contenedor-uno {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 1fr 4fr 1fr;
+  min-height: 100vh; }
+  .contenedor-uno video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    -webkit-filter: grayscale(100%);
+    opacity: 15%; }
+  .contenedor-uno .header {
+    grid-area: header; }
+  .contenedor-uno .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: main; }
+    .contenedor-uno .main .centrado-h1 {
+      width: 45%;
+      margin-bottom: 5rem;
+      display: flex;
+      justify-content: center; }
+      .contenedor-uno .main .centrado-h1 .main__h1 {
+        text-align: center;
+        font-size: 8rem;
+        font-family: 'Clicker Script', cursive;
+        color: #F1FAEE;
+        text-shadow: 0.35rem 0.35rem black; }
+    .contenedor-uno .main .main__h2 {
+      text-align: center;
+      font-size: 4rem;
+      color: #F1FAEE;
+      text-shadow: 0.35rem 0.35rem black; }
+
+/*Estilos de FOOTER mobile*/
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #1d3557;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem; }
+  .footer .footer__h2 {
+    color: white;
+    margin-top: 0.5rem;
+    font-size: 1.2rem; }
+  .footer .footer__img img {
+    margin: 0.5rem 1rem 0rem 1rem; }
+
+/*Media para Menú y Footer*/
+@media screen and (min-width: 601px) {
+  /*MENÚ*/
+  .menu .menu__div-fluid .menu__a-home {
+    font-size: 1.8rem; }
+  .menu .menu__div-fluid .menu__icono img {
+    width: 3rem; }
+  .menu .menu__div-fluid div ul .menu__li .menu__a {
+    font-size: 1.8rem; }
+  /*FOOTER*/
+  .footer .footer__h2 {
+    font-size: 1.8rem; } }
+
+/* Media extra (colapsa el navbar)*/
+@media screen and (min-width: 992px) {
+  /*MENÚ*/
+  .menu .menu__div-fluid .menu__a-home {
+    font-size: 2.1rem;
+    margin-left: 2.1rem; }
+  .menu .menu__div-fluid .menu__a-home:hover {
+    color: white;
+    background-color: #457b9d42;
+    border-radius: 1rem; }
+  .menu .menu__div-fluid div ul .menu__li {
+    margin: 0rem 3rem; }
+    .menu .menu__div-fluid div ul .menu__li .menu__a {
+      font-size: 2rem; }
+    .menu .menu__div-fluid div ul .menu__li .menu__a:hover {
+      color: white; }
+  .menu .menu__div-fluid div ul .menu__li:hover {
+    background-color: #457b9d42;
+    border-radius: 1rem; }
+  .menu .menu__div-fluid .menu__icono {
+    display: none; } }
+
+/*Media HOME*/
+@media screen and (min-width: 601px) {
+  .contenedor-uno .main .centrado-h1 {
+    width: 70%; }
+    .contenedor-uno .main .centrado-h1 .main__h1 {
+      font-size: 10rem; }
+  .contenedor-uno .main .main__h2 {
+    font-size: 5rem; } }
+
+@media screen and (min-width: 992px) {
+  .contenedor-uno .main .centrado-h1 {
+    width: 100%; }
+    .contenedor-uno .main .centrado-h1 .main__h1 {
+      font-size: 13rem; }
+  .contenedor-uno .main .main__h2 {
+    font-size: 6rem; } }
+
+@media screen and (min-width: 1367px) {
+  .contenedor-uno .main .centrado-h1 .main__h1 {
+    font-size: 15rem; }
+  .contenedor-uno .main .main__h2 {
+    font-size: 7rem; } }
